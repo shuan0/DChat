@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    <div class="container">
+        {% if user.is_authenticated %}
+        {% block body %}
+        {% endblock %}
+        {% else %}
+        <div class="alert">
+            <h2>¡Tenés que iniciar sesión con tu cuenta!</h2>
+            <a href="{% url 'signin' %}">Iniciar sesión</a>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

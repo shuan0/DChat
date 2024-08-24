@@ -1,0 +1,35 @@
+{% extends 'account/base.html' %}
+
+{% block head %}
+<title>Registro</title>
+{% endblock %}
+
+{% block form-header %}
+<h2>Registrate con tus datos</h2>
+{% endblock %}
+
+{% block form-body %}
+<div class="inputs-container">
+    <div class="input-container">
+        <label class="input-label" for="username">Nombre de usuario</label>
+        <input class="input-target" name="username" type="text" placeholder="..." required />
+    </div>
+    <div class="input-container">
+        <label class="input-label" for="password-a">Contraseña</label>
+        <input class="input-target" name="password-a" type="password" placeholder="..." required />
+    </div>
+    <div class="input-container">
+        <label class="input-label" for="password-b">Repetir contraseña</label>
+        <input class="input-target" name="password-b" type="password" placeholder="..." required />
+    </div>
+</div>
+<div class="submit-container">
+    <button class="submit-button" type="submit">Registrarme</button>
+</div>
+{% endblock %}
+
+{% block form-footer %}
+<p class="grey-text">
+    ¿Ya tenés una cuenta? <a href="{% url 'signin' %}">Iniciá sesión</a>
+</p>
+{% endblock %}
