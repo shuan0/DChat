@@ -1,22 +1,27 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'chat/css/style.css' %}" />
     {% block head %}
     {% endblock %}
 </head>
 <body>
+    {% if user.is_authenticated %}
     <div class="container">
-        {% if user.is_authenticated %}
         {% block body %}
         {% endblock %}
-        {% else %}
+    </div>
+    {% else %}
+    <div class="alert-container">
         <div class="alert">
             <h2>¡Tenés que iniciar sesión con tu cuenta!</h2>
-            <a href="{% url 'signin' %}">Iniciar sesión</a>
+            <a class="sign-button" href="{% url 'signin' %}">Iniciar sesión</a>
         </div>
-        {% endif %}
     </div>
+    {% endif %}
 </body>
 </html>
