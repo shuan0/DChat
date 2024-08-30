@@ -1,13 +1,21 @@
+:root {
+    --pr-color: #222831;
+    --sc-color: #31363f;
+    --tr-color: #76abae;
+    --qt-color: #eee;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     outline: none;
     font-family: Helvetica, sans-serif;
+    color: var(--qt-color);
 }
 
 body {
-    background-color: #eee;
+    background-color: var(--pr-color);
 }
 
 .alert-container {
@@ -24,17 +32,15 @@ body {
     align-items: center;
     gap: 12px;
     padding: 16px;
-    box-shadow: 0 0 8px 4px rgba(0 0 0 / 0.4);
-    background-color: #fff;
+    background-color: var(--sc-color);
     border-radius: 4px;
 }
 
 .sign-button {
-    background-color: #80c8fa;
+    background-color: var(--tr-color);
     padding: 6px;
-    border: 2px solid #000;
+    border: 2px solid var(--qt-color);
     border-radius: 4px;
     text-decoration: none;
-    color: #000;
     font-size: 18px;
 }
