@@ -12,8 +12,18 @@
 <body>
     {% if user.is_authenticated %}
     <div class="container">
-        {% block body %}
-        {% endblock %}
+        <main class="page-content">
+            <section class="sidebar">
+                <nav class="sidebar-navbar">
+                    <ul>
+                        <li>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            {% block body %}
+            {% endblock %}
+        </main>
     </div>
     {% else %}
     <div class="alert-container">
