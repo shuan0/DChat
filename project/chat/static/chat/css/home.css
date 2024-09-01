@@ -12,11 +12,11 @@
     border-right: none;
 }
 
-.chats-view {
+.chats {
     padding: 16px;
-    width: 25%;
+    width: 40%;
 }
 
-.chat-content {
+.current-chat {
     width: 100%;
 }
