@@ -17,7 +17,11 @@
                 <nav>
                     <ul>
                         <li>
-                            <p>Perfil</p>
+                            <figure class="user-picture">
+                                <a href="#">
+                                    <img class="user-picture-image" src="{{ request.user.get_image }}" alt="Perfil" />
+                                </a>
+                            </figure>
                         </li>
                     </ul>
                 </nav>
