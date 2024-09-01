@@ -1,0 +1,22 @@
+.page-content {
+    display: flex;
+    width: 100%;
+}
+
+.page-content > * {
+    height: 100%;
+    border-right: 1px solid var(--qt-color);
+}
+
+.page-content > :last-child {
+    border-right: none;
+}
+
+.chats-view {
+    padding: 16px;
+    width: 25%;
+}
+
+.chat {
+    width: 100%;
+}

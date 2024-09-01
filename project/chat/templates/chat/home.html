@@ -2,18 +2,19 @@
 {% load static %}
 
 {% block head %}
+<link rel="stylesheet" href="{% static 'chat/css/home.css' %}" />
 <title>Chats</title>
 {% endblock %}
 
-{% block body %}
-<section class="left-panel">
-    <header class="left-panel-header">
+{% block page-content %}
+<section class="chats-view">
+    <header class="chats-header">
         <div class="title">
             <h1>Tus chats</h1>
         </div>
     </header>
 </section>
-<section class="right-panel">
-    <div class="content"></div>
+<section class="chat-content">
+    <div class="chat"></div>
 </section>
 {% endblock %}

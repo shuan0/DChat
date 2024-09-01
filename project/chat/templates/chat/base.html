@@ -5,25 +5,28 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'chat/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'chat/css/base.css' %}" />
     {% block head %}
     {% endblock %}
 </head>
 <body>
     {% if user.is_authenticated %}
     <div class="container">
-        <main class="page-content">
+        <div class="content">
             <section class="sidebar">
-                <nav class="sidebar-navbar">
+                <nav>
                     <ul>
                         <li>
+                            <p>Perfil</p>
                         </li>
                     </ul>
                 </nav>
             </section>
-            {% block body %}
-            {% endblock %}
-        </main>
+            <main class="page-content">
+                {% block page-content %}
+                {% endblock %}
+            </main>
+        </div>
     </div>
     {% else %}
     <div class="alert-container">

@@ -45,33 +45,26 @@ body {
     font-size: 18px;
 }
 
-.page-content {
-    display: flex;
+.container {
     width: 100vw;
     height: 100vh;
 }
 
-.page-content > * {
-    padding: 16px;
-    border-right: 1px solid var(--qt-color);
-}
-.page-content:last-child {
-    border-right: none;
+.content {
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
 
 .sidebar {
-    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    background-color: var(--sc-color);
+    border-right: 1px solid var(--qt-color);
 }
 
-.sidebar-navbar ul {
+.sidebar nav ul {
     list-style: none;
-}
-
-.left-panel {
-    width: 50%;
-}
-
-.right-panel {
-    width: 100%;
-    border-right: none;
 }
