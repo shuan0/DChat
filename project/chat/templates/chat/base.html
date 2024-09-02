@@ -19,7 +19,7 @@
                         <li>
                             <a href="{% url 'profile' %}">
                                 <figure class="user-picture">
-                                    <img src="{{ user.get_image }}" alt="Perfil" />
+                                    <img src="{{ user.get_avatar }}" alt="Perfil" />
                                 </figure>
                             </a>
                         </li>
@@ -42,7 +42,7 @@
     {% else %}
     <div class="alert-container">
         <div class="alert">
-            <h2>¡Tenés que iniciar sesión con tu cuenta!</h2>
+            <h2>¡Tenés que ingresar con tu cuenta!</h2>
             <a class="sign-button" href="{% url 'signin' %}">Iniciar sesión</a>
         </div>
     </div>

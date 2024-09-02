@@ -21,6 +21,7 @@
     flex-direction: column;
     align-items: center;
     gap: 16px;
+    width: 100%;
 }
 
 .account-form-inputs {
@@ -51,7 +52,7 @@
 
 .account-form-action-buttons {
     display: flex;
-    gap: 8px;
+    gap: 12px;
 }
 
 .submit-button {

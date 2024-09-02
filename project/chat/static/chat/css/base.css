@@ -78,16 +78,19 @@ body {
 }
 
 .user-picture {
+    width: 48px;
+    height: 48px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: var(--tr-color);
     border-radius: 100%;
     mask-image: radial-gradient(circle, #000 100%, transparent 100%);
 }
 
 .user-picture img {
     width: 100%;
+    height: 100%;
 }
 
 .icon-container {
