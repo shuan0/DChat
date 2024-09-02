@@ -39,3 +39,8 @@ def signin(request):
 
     login(request, user)
     return redirect('home')
+
+def signout(request):
+    if request.user.is_authenticated:
+        logout(request)
+    return redirect('home')

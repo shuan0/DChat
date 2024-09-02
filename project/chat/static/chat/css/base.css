@@ -66,5 +66,38 @@ body {
 }
 
 .sidebar nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     list-style: none;
+}
+
+.sidebar nav ul li {
+    width: 48px;
+    height: 48px;
+}
+
+.user-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 100%;
+    mask-image: radial-gradient(circle, #000 100%, transparent 100%);
+}
+
+.user-picture img {
+    width: 100%;
+}
+
+.icon-container {
+    display: flex;
+    border-radius: 100%;
+    transition-duration: 0.6s;
+    padding: 10px;
+    fill: var(--tr-color);
+    background-color: var(--pr-color);
+}
+.icon-container:hover {
+    fill: var(--qt-color);
 }

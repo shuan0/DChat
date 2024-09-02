@@ -1,0 +1,38 @@
+{% extends 'chat/base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'chat/css/profile.css' %}" />
+<title>Perfil</title>
+{% endblock %}
+
+{% block page-content %}
+<div class="account-form-container">
+    <header class="account-form-header">
+        <div class="title">
+            <h1>Tu perfil</h1>
+        </div>
+    </header>
+    <form class="account-form" action="" method="post">
+        {% csrf_token %}
+        <div class="account-form-inputs">
+            <div class="account-form-input-container">
+                <label class="account-form-input-label" for="avatar">Foto de perfil</label>
+                <input class="account-form-input" id="avatar" name="avatar" type="file" accept="image/png" />
+            </div>
+            <div class="account-form-input-container">
+                <label class="account-form-input-label" for="username">Nombre de usuario</label>
+                <input class="account-form-input" id="username" name="username" type="text" value="{{ user.username }}" />
+            </div>
+        </div>
+        <div class="account-form-submit-button-container">
+            <button class="account-form-submit-button account-form-input" type="submit">Guardar cambios</button>
+        </div>
+    </form>
+    <footer class="account-form-footer">
+        <div class="signout-button-container">
+            <a class="signout-button" href="{% url 'signout' %}">Cerrar sesión</a>
+        </div>
+    </footer>
+</div>
+{% endblock %}
