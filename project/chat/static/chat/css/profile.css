@@ -36,29 +36,37 @@
     text-align: start;
 }
 
+.account-form-input-label {
+    color: var(--tr-color);
+    font-weight: bold;
+}
+
 .account-form-input {
-    padding: 6px;
+    padding: 8px;
     font-size: 1em;
     border: 1px solid var(--qt-color);
     border-radius: 4px;
-    background-color: var(--tr-color);
+    background-color: var(--pr-color);
 }
 
-.account-form-submit-button {
+.account-form-action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.submit-button {
     cursor: pointer;
 }
 
-.account-form-footer {
-    text-align: center;
-}
-
 .signout-button-container {
-    margin-top: 10px;
-    margin-bottom: 4px;
+    display: flex;
+    justify-content: center;
 }
 
 .signout-button {
-    padding: 6px;
+    display: block;
+    width: fit-content;
+    padding: 8px;
     border-radius: 4px;
     font-size: 1em;
     background-color: #c80000;

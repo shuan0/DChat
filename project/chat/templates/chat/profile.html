@@ -25,14 +25,14 @@
                 <input class="account-form-input" id="username" name="username" type="text" value="{{ user.username }}" />
             </div>
         </div>
-        <div class="account-form-submit-button-container">
-            <button class="account-form-submit-button account-form-input" type="submit">Guardar cambios</button>
+        <div class="account-form-action-buttons">
+            <div class="submit-button-container">
+                <button class="submit-button account-form-input" type="submit">Guardar cambios</button>
+            </div>
+            <div class="signout-button-container">
+                <a class="signout-button" href="{% url 'signout' %}">Cerrar sesión</a>
+            </div>
         </div>
     </form>
-    <footer class="account-form-footer">
-        <div class="signout-button-container">
-            <a class="signout-button" href="{% url 'signout' %}">Cerrar sesión</a>
-        </div>
-    </footer>
 </div>
 {% endblock %}
