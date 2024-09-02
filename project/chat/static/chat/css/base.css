@@ -60,6 +60,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     padding: 16px;
     background-color: var(--sc-color);
     border-right: 1px solid var(--qt-color);
@@ -68,7 +69,7 @@ body {
 .sidebar nav ul {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 12px;
     list-style: none;
 }
 
@@ -97,10 +98,10 @@ body {
     display: flex;
     border-radius: 100%;
     transition-duration: 0.6s;
-    padding: 10px;
+    padding: 4px;
     fill: var(--tr-color);
-    background-color: var(--pr-color);
 }
 .icon-container:hover {
+    background-color: var(--pr-color);
     fill: var(--qt-color);
 }
