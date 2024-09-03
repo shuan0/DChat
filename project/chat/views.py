@@ -11,7 +11,6 @@ def profile(request):
     avatar = request.FILES.get('avatar', '')
     if avatar:
         user_avatar = UserAvatar.objects.create(avatar=avatar)
-        user_avatar.save()
         avatar = user_avatar.avatar
         user_avatar.delete()
 
@@ -23,7 +22,10 @@ def profile(request):
     except:
         User.objects.filter(username=request.user.username).update(
             username=username,
-            avatar=(avatar if avatar else request.user.image)
+            avatar=(avatar if avatar else request.user.avatar)
         )
 
     return redirect('profile')
+
+def search(request):
+    return render(request, 'chat/search.html')
